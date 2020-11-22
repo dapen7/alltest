@@ -1,0 +1,32 @@
+{
+    "name": "downloadmanager",
+    "version": "1.0.0",
+    "description": "downloadmanager",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron main.js",
+        "build": "electron-builder"
+    },
+    "build": {
+        "asar":false,
+        "icon":"logo.ico",
+        "files": ["!依赖"],
+        "win": {
+            "icon":"logo.ico",
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ]
+        }
+    },
+    "author": "dubang",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^11.0.2",
+        "electron-builder": "^22.9.1"
+    }
+}
