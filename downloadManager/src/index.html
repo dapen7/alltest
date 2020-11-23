@@ -9,7 +9,8 @@
             width:100%;
             height:100%;
         }
-        iframe{
+        webview{
+            display:inline-flex;
             border:0;
             outline:0;
             width:100%;height:100%;
@@ -17,6 +18,16 @@
     </style>
 </head>
 <body>
-    <iframe width="100%" height="100%" src="http://localhost:3000"></iframe>
+    <!-- <iframe width="100%" height="100%" src="http://localhost:3000"></iframe> -->
+    <webview id="foo" src="https://www.github.com/" style="display:inline-flex; width:640px; height:480px"></webview>
+    <webview id="foo" src="http://localhost:3000" style="display:inline-flex; width:640px; height:480px"></webview>
+    <script>
+        function test(){
+            let req = new XMLHttpRequest();
+            req.open("GET", "http://localhost:3001/test");
+            req.send("http://localhost:3001/test");
+        }
+        test();
+    </script>
 </body>
 </html>

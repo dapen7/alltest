@@ -4,12 +4,11 @@
     "description": "downloadmanager",
     "main": "main.js",
     "scripts": {
-        "start": "electron main.js",
-        "build": "electron-builder"
+        "start": "chcp 65001 && electron .",
+        "build": "electron-builder --win --x64"
     },
     "build": {
         "asar":false,
-        "icon":"logo.ico",
         "files": ["!依赖"],
         "win": {
             "icon":"logo.ico",
